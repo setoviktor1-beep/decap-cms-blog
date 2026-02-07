@@ -1,6 +1,6 @@
 ﻿title: Static Blog
 description: A modern static blog with Decap CMS
-url: "https://setoviktor1-beep.github.io/decap-cms-blog"
+url: "https://setoviktor1-beep.github.io/decap-cms-blog/"
 
 plugins:
   - jekyll-seo-tag

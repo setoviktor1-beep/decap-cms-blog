@@ -1,7 +1,7 @@
 ﻿backend:
   name: github
   repo: setoviktor1-beep/decap-cms-blog
-  branch: main
+  branch: master
   base_url: https://github-oauth-proxy.setov-decaphcms.workers.dev
   auth_endpoint: auth
 
