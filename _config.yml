@@ -1,12 +1,12 @@
 ﻿title: Static Blog
 description: A modern static blog with Decap CMS
-url: "https://setoviktor1-beep.github.io/decap-cms-blog" # CHANGE THIS
+url: "https://setoviktor1-beep.github.io/decap-cms-blog"
 
 plugins:
   - jekyll-seo-tag
 
+# Svarbu: ne-excludiname admin!
 exclude:
-  - admin
   - oauth-worker
   - node_modules
   - package.json
