@@ -1,6 +1,6 @@
-title: Static Blog
+﻿title: Static Blog
 description: A modern static blog with Decap CMS
-url: "https://your-username.github.io/decap-cms-blog" # CHANGE THIS
+url: "https://setoviktor1-beep.github.io/decap-cms-blog" # CHANGE THIS
 
 plugins:
   - jekyll-seo-tag
