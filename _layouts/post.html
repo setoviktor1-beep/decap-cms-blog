@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- SEO -->
+    <meta name="description" content="{{ page.description }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:image" content="{{ page.cover }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/">← Back to Home</a>
+        </header>
+        
+        <article class="markdown-body">
+            <h1>{{ page.title }}</h1>
+            <div class="meta">
+                <span>{{ page.date | date_to_string }}</span> • 
+                <span class="badge">{{ page.category }}</span>
+            </div>
+            {% if page.cover %}
+            <img src="{{ page.cover }}" alt="Cover" style="margin: 2rem 0;">
+            {% endif %}
+            
+            {{ content }}
+        </article>
+    </div>
+</body>
+</html>
