@@ -32,11 +32,18 @@ export default {
         return new Response(JSON.stringify(result), { status: 400 });
       }
 
+      // Decap CMS expects a Netlify CMS-style payload `{ token, provider }`.
+      // GitHub returns `{ access_token, ... }`, so translate it.
+      const postMsgContent = {
+        token: result.access_token,
+        provider: "github",
+      };
+
       const content = `
         <script>
           const receiveMessage = (message) => {
             window.opener.postMessage(
-              'authorization:github:success:${JSON.stringify(result)}', 
+              'authorization:github:success:${JSON.stringify(postMsgContent)}', 
               message.origin
             );
             window.removeEventListener("message", receiveMessage, false);
